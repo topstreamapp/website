@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TopStream - обязательный инструмент для стримера в 2к20</title>
+        <link rel="shortcut icon" href="./favicon.ico">
+        <meta property="og:title" content="TopStream - обязательный инструмент для стримера в 2к20">
+        <meta property="og:description" content="Приложение чата и виджетов для стримеров TopStream. Мультичат для Twitch, YouTube, GoodGame, VK, Peka2.">
+        <meta property="og:image" content="https://topstream.pro/assets/og.jpg">
+        <meta property="og:url" content="https://topstream.pro/">
+        <meta name="title" content="TopStream - обязательный инструмент для стримера в 2к20">
+        <meta name="description" content="Приложение чата и виджетов для стримеров TopStream. Мультичат для Twitch, YouTube, GoodGame, VK, Peka2.">
+        <meta name="author" content="topstream">
+        <link href="./assets/build-9071950943361662.css" rel="stylesheet" type="text/css">
+    </head>
+    <body class="bg-dark">
+        <nav id="navigation" class="navbar navbar-expand-lg nav-fixed navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">
+                <img class="ts-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAFH0lEQVR4Ab2XA7ArSxCGs7vRsW0Hx+a1eaxn27Zt2yg+F55t27Zt5H//dp2pJDU35/pu1V/r/5vp6e5NHGqzDGPYMsy7uP/WNIwfZB8pB8W9NY1MtY+WeBkO4y5ihqmo7QzehMsw4eSex9ybUHuRwwSfm1byfMQ76thtWODA1XNnKGi/esmWacsR3htG2Ng0LTR60zCcUoLdMqqxKzWUUox6byqfCw/MfsdSPhQjCSNqkMJ0PKmBKSs8QvhofHZBOz4LjgAtOwHtuwMde4rkuGVHfOAfxGn5rajisxEREB+nBham48fIMJmyFyi8pomzCzuA1p2Brn2B+s1xR+kMnJDbgD0za7B3pg9n5TXhkYr5QOPWQPd+QNN2OJWDdBOmfHWwMB0/UDZQQmJOQYtd8XgtOAz0HoyP/MPYNr0KGU5vzPUtcSfisJx6/NuwBdBzAJ7z9SPXGQeBCzgcQWFy+zYCLDfy+ML3DVsC3QfgDI7eEfGSKTLESN6hogbgScJ9dgS698cnwTFkTw02CkymAqvwCvyDwJBA98n0RwAJizFbQ+6HB27rmpJemfmrNcsiE08HK9OLmCDoOwQn5zaGjTWYgUynZ7Xl9XDFAnodhFPpFRNsq8qTDLTtgrd8/auE5rsTcHpRF17j/R+Z4S9zf3ZRJ2rCmSxqTcjG8oxKZFke/GqveeM2KGIOxARfYs+Wmbk4MVeDbp5Wge9sk9YdgYbNgboJwD5v3g7/UgdPzao7MQfv+lZI1LZIr8Q+aZWy3qfIfR0sXet3JsP3gREtZINppRIJ1G+GEGf5H3NAKeQfAOrGgZbtCW/A01xTNG4ps7yI0UgxXVJin9aslDzQwI3eFJrviivtLFahdcXhAJoRSE3iP0II08XmgeAo/q6bxJGc2U/BYYnERGqJ+LxXvUzOqz2JOpgPSRfamW1QgW8unwv0HgSIuQbVZ968PXZjYzk1rxHo2hvLkvLF53q7CbXvhuXJBTp4t4wamfFwShEUuCU+Ax/YbbJ2XIfpkpC/ULkI1xf3ELQru5tMAqcxCmjfE1unletgNnyCd8Mom74CT2ZU4eXqJRLmNQEzKgJn2KWFXlHUJT6n5DQAHXtgq1WBh5ILZcZb8OZIajGuKe7D97Vj+IJmIf8QsCZgKkQhMAg0b4tzC9oEdGNhp3gvZLVo4Gp3opTK8dlB3MgPAWYfDTDMv/tW4t/AsBj+t4YCZYMXJ8sa4zN6oGlrFLniNbB0o2/4wnu+ASn2OyoXAI1bAXVjKrHWDszy6kjIgmVYUoqvVy2O3UCOzamTr9GShBz7nA2gSgzAGa8NWMqLzeUWRu6yvBagYy8ckOWPDc5yeqXYv2Y9qmtXSobuxnXuX0v4gEQLTdvgNy5ZmuVeNVh1lf3ssuo7FNcU9YSbPcPENknDwbWCw4azrHYK9wYdbBnhz969FfMFflJ+y9RHPkGSBWs1436gbWfcziakgDG+xyZcpik3PKaF530rBX5efhsWJuXhX9bnmq31IOCnWnfB49XL5RsdC/yD+oVgRszawxdu5WjRvS/QsBX+4UBCNJ0OKG2zfnNCd8KNZbNjQSFM9WMvlnZiNn7FRsI+LN1IPoe1o1LjEI3KNbnHxHyXzWZr9uvpPIWpft5OpwTTiW1odnvpbHzIMLJ3EzYpCvH4A870ltJZ2IpJ5DUt3UPXE+oHPdZUSSwLvycZPfGZtuQ4UZXKGkuYsp1BYROJrOhtmLprKuN+kP2GkfKK+tP2P2o4fPHiwth4AAAAAElFTkSuQmCC" width="30" height="30" alt="TopStream App">
+                TopStream App
+            </a>
+
+            <ul class="navbar-nav navbar-no-mobile">
+                <li class="nav-item">
+                    <a class="nav-link" href="#chat-services">Сервисы чата</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.donationalerts.ru/r/topstreamapp" target="_blank">Поддержать проект</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bonus" href="./icons.html">Бонус для поддержавших</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="first">
+            <h1 class="text-white">Топовый чат и классные виджеты для стрима</h1>
+            <h2 class="text-white">Чат для вывода на стрим с различными скинами и другие виджеты, БЕСПЛАТНО без ограничений.</h2>
+            <a class="btn btn-primary btn-download btn-lg text-white" id="windows-link"><i class="fab fa-windows"></i> Загрузить TopStream <span>1.0.0</span></a>>
+            <p>Для 64-разрядных версий Windows 7/8/8.1/10</p>
+            <div class="scrollHint">
+                <i class="fas fa-arrow-down scrollHintIcon"></i>
+            </div>
+        </section>
+
+        <section class="bg-dark text-white mt-5" id="chat-services">
+            <h2 class="text-center mt-5 font-weight-light h1">Сервисы поддерживаемые виджетом чата</h2>
+
+            <h4 class="text-center font-weight-light">Виджет чата TopStream предназначен для вывода на трансляцию,<br>и поддерживает все основные стриминговые платформы:</h4>
+
+            <div class="container text-center mt-5 mb-5">
+                <div class="row">
+                    <div class="col-sm">
+                        <a href="https://www.twitch.tv/" target="_blank">
+                            <i class="fab fa-twitch fa-5x"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm">
+                        <a href="https://www.youtube.com/" target="_blank">
+                            <i class="fab fa-youtube fa-5x"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm">
+                        <a href="https://vk.com/video" target="_blank">
+                            <i class="fab fa-vk fa-5x"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm service-size">
+                        <a href="https://goodgame.ru/" target="_blank">
+                            GoodGame!
+                        </a>
+                    </div>
+                    <div class="col-sm service-size">
+                        <a href="https://sc2tv.ru/" target="_blank">
+                            Пекач
+                        </a>
+                    </div>
+                    <div class="col-sm service-size">
+                        <a href="https://mixer.com/" target="_blank">
+                            Mixer
+                        </a>
+                    </div>
+                    <div class="col-sm service-size">
+                        <a href="https://wasd.tv/" target="_blank">
+                            WASD.tv
+                        </a>
+                    </div>
+                    <div class="col-sm service-size">
+                        <a href="https://ok.ru/live" target="_blank">
+                            OK Live
+                        </a>
+                    </div>
+                    <div class="col-sm service-size">
+                        <a href="https://streamlabs.com/" target="_blank">
+                            Streamlabs
+                        </a>
+                    </div>
+                    <div class="col-sm service-size">
+                        <a href="https://www.donationalerts.com/" target="_blank">
+                            DonationAlerts
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-dark text-white screenshots">
+            <h3 class="text-center font-weight-light mb-5">Как это выглядит:</h3>
+            <img src="/assets/chat1.jpg" class="screenshot" alt="Чат для вывода на стрим" draggable="false">
+            <a href="#" id="prevScreenshot"><i class="fas fa-arrow-circle-left"></i></a>
+            <a href="#" id="nextScreenshot"><i class="fas fa-arrow-circle-right"></i></a>
+        </section>
+
+        <section class="bg-dark text-white">
+            <h3 class="text-center font-weight-light mb-5">Дополнительно, вы получаете следующий функционал:</h3>
+
+            <ul class="text-center font-weight-light mb-5 feature-list">
+                <li><i class="far fa-heart"></i> Мультичат для Twitch, YouTube, GoodGame, VK, Peka2, Mixer, который работает в любом стриминговом софте и браузере.</li>
+                <li><i class="far fa-heart"></i> Различные скины для чата. Возможность подключать свои скины!</li>
+                <li><i class="far fa-heart"></i> Редактор скинов. Создание скинов для чата на стрим!</li>
+                <li><i class="far fa-heart"></i> Фильтрация сообщений и ботов.</li>
+                <li><i class="far fa-heart"></i> Замена никнеймов пользователей на желаемые.</li>
+                <li><i class="far fa-heart"></i> Полная поддержка Twitch, включая все смайлики сервиса, цвета ников, удаление сообщений при банах и все иконки.</li>
+                <li><i class="far fa-heart"></i> Поддержка BetterTTV смайлов.</li>
+                <li><i class="far fa-heart"></i> Поддержка FrankerFaceZ смайлов.</li>
+                <li><i class="far fa-heart"></i> Вывод чата WASD.tv на стрим. Чат с поддержкой WASD.tv.</li>
+                <li><i class="far fa-heart"></i> Поддержка GoodGame и Peka2 со смайликами, иконками и цветами ников.</li>
+                <li><i class="far fa-heart"></i> Поддержка чатов Mixer.</li>
+                <li><i class="far fa-heart"></i> Поддержка всех эмодзи.</li>
+                <li><i class="far fa-heart"></i> Возможность открытия любого, даже стороннего виджета в отдельном окне.</li>
+                <li><i class="far fa-heart"></i> Возможность встраивать чаты, сайты и виджеты на экран, не создавая окон!</li>
+                <li><i class="far fa-heart"></i> Слайдшоу из картинок или профилей из социальных сетей стримера.</li>
+                <li><i class="far fa-heart"></i> Универсальный розыгрыш для ваших зрителей.</li>
+                <li><i class="far fa-heart"></i> Озвучивание сообщений чата.</li>
+            </ul>
+        </section>
+
+        <section class="bg-dark text-white" id="macos">
+            <h2 class="text-center mt-5 font-weight-light h1">Работает на Windows и macOS</h2>
+            <h4 class="text-center font-weight-light">Приложение доступно для вашего macOS или Windows устройства. macOS версия временно недоступна.</h4>
+            <div class="macos-container">
+                <img src="/assets/macos.png" class="img-fluid" alt="TopStream App для macOS">
+            </div>
+            <p class="text-center h4 font-weight-light">TopStream это чат для стрима, который точно стоит попробовать!<br>Загрузка и установка займет не более минуты. Интуитивно понятные настройки, и все это бесплатно!</p>
+            <p class="text-center h4 font-weight-light">Чат подходит для OBS и XSplit.</p>
+        </section>
+
+        <section class="bg-dark text-white mt-2" id="streamers">
+                <h2 class="text-center mt-5 font-weight-light h1">Стримеры уже используют TopStream</h2>
+                <h4 class="text-center font-weight-light">Небольшой список стримеров, на каналах которых вы можете посмотреть чат в действии.</h4>
+            
+                <div class="container">
+                    <div class="row text-center mt-5">
+                        <div class="col">
+                            <a href="https://www.twitch.tv/nuke73" target="_blank"><img src="./assets/nuke73.png" class="profile" alt="Nuke73 TopStream App"></a>
+                            <a href="https://www.twitch.tv/nuke73" target="_blank"><i class="fab fa-twitch"></i> Nuke73</a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.twitch.tv/Alexfromvapersmd" target="_blank"><img src="./assets/alex.png" class="profile" alt="Westmage TopStream App"></a>
+                            <a href="https://www.twitch.tv/Alexfromvapersmd" target="_blank"><i class="fab fa-twitch"></i> Alexfromvapersmd</a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.twitch.tv/cahchec" target="_blank"><img src="./assets/cahchec.jpeg" class="profile" alt="cahchec TopStream App"></a>
+                            <a href="https://www.twitch.tv/cahchec" target="_blank"><i class="fab fa-twitch"></i> cahchec</a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.twitch.tv/vika_supernova" target="_blank"><img src="./assets/vika.jpeg" class="profile" alt="1_supernova TopStream App"></a>
+                            <a href="https://www.twitch.tv/vika_supernova" target="_blank"><i class="fab fa-twitch"></i> vika_supernova</a>
+                        </div>
+                    </div>
+                    <div class="row text-center mt-5">
+                        <div class="col">
+                            <a href="https://www.twitch.tv/zhem" target="_blank"><img src="./assets/zhem.png" class="profile" alt="Zhem TopStream App"></a>
+                            <a href="https://www.twitch.tv/zhem" target="_blank"><i class="fab fa-twitch"></i> Zhem</a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.twitch.tv/khloya" target="_blank"><img src="./assets/khloya.png" class="profile" alt="khloya TopStream App"></a>
+                            <a href="https://www.twitch.tv/khloya" target="_blank"><i class="fab fa-twitch"></i> Khloya</a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.twitch.tv/AqVadPlay" target="_blank"><img src="./assets/aqvad.png" class="profile" alt="AqVadPlay TopStream App"></a>
+                            <a href="https://www.twitch.tv/AqVadPlay" target="_blank"><i class="fab fa-twitch"></i> AqVadPlay</a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.twitch.tv/ramix572" target="_blank"><img src="./assets/ramix.jpeg" class="profile" alt="ramix572 TopStream App"></a>
+                            <a href="https://www.twitch.tv/ramix572" target="_blank"><i class="fab fa-twitch"></i> ramix572</a>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-center h4 font-weight-light mt-5">Хотите попасть в этот список? Контакт для связи чуть ниже!</p>
+        </section>
+
+        <footer class="navbar navbar-expand-lg navbar-dark bg-dark mt-5 mb-5">
+            <ul class="navbar-nav navbar-left">
+                <li class="nav-item">
+                    <p class="nav-link">TopStream &copy; 2018 - 2020</p>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mailto:contact@topstream.pro">Связь и поддержка</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/topstreamapp/topstream-css-guide" target="_blank">Документация по скинам</a>
+                </li>
+            </ul>
+        </footer>
+
+        <div style="position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(0, 0, 0, 0.9); padding: 20px; color: #fff; font-size: 24px;">Новый сервис уже совсем скоро! <a href="https://brocaster.app/?utm_source=topstream">Узнать подробности</a></div>
+
+        <noscript><div><img src="https://mc.yandex.ru/watch/47933894" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+        <script src="./assets/build-9071950943361662.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118462542-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+        
+            gtag('config', 'UA-118462542-2');
+        </script>
+    </body>
+</html>

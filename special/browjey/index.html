@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Radiant & Dire by satanch</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+            body {
+            font-family: 'Roboto', sans-serif;
+            }
+
+            .progress-container {
+            width: 100%;
+            margin: 20px 0;
+            font-weight: 400;
+            }
+
+            .progress-line {
+            position: relative;
+            width: 100%;
+            background: #ed1c24;
+            height: 40px;
+            box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.75);
+            border: 2px solid #000;
+            border-radius: 4px;
+            }
+
+            .progress-bar {
+            position: absolute;
+            height: 40px;
+            width: 0%;
+            background: #007200;
+            transition: all 0.5s ease-in-out;
+            }
+
+            .left-text, .right-text {
+            position: absolute;
+            z-index: 2;
+            font-size: 26px;
+            color: #fff;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            }
+
+            .left-text {
+            top: 5px;
+            left: 10px;
+            }
+
+            .right-text {
+            top: 5px;
+            right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="progress-container">
+            <div class="progress-line">
+                <div class="left-text" id="radiant">-</div>
+                <div class="right-text" id="dire">-</div>
+                <div class="progress-bar" id="line"></div>
+            </div>
+        </div>
+
+        <script src="./tmi.min.js"></script>
+        <script>
+            (function () {
+                const elems = {
+                    radiant: document.querySelector('#radiant'),
+                    dire: document.querySelector('#dire'),
+                    line: document.querySelector('#line')
+                };
+
+                const score = {
+                    radiant: 0,
+                    dire: 0
+                };
+
+                const renderScore = function() {
+                    const sum = score.radiant + score.dire;
+                    const radiantPercent = isNaN((score.radiant * 100) / sum) ? 0 : (score.radiant * 100) / sum;
+                    const direPercent = isNaN((score.dire * 100) / sum) ? 0 : (score.dire * 100) / sum;
+
+                    elems.line.style.width = `${Math.floor(radiantPercent)}%`;
+                    elems.radiant.textContent = `${Math.floor(radiantPercent)}%`;
+                    elems.dire.textContent = `${Math.floor(direPercent)}%`;
+                };
+
+                renderScore();
+
+                const users = {};
+
+                const options = {
+                    options: {
+                        debug: false
+                    },
+                    connection: {
+                        secure: true,
+                        reconnect: true
+                    },
+                    channels: [ '#browjey' ]
+                };
+
+                const client = new tmi.client(options);
+
+                client.connect();
+
+                client.on('message', (channel, userstate, message) => {
+                    if (userstate.emotes === null)
+                        return false;
+                    const emotes = Object.keys(userstate.emotes);
+
+                    if (emotes.indexOf('300831050') !== -1 || emotes.indexOf('300831052') !== -1) {
+                        const radiant = emotes.indexOf('300831050') !== -1;
+                        if (typeof users[userstate['user-id']] === 'undefined') {
+                            users[userstate['user-id']] = radiant ? 'radiant' : 'dire';
+                            if (radiant)
+                                score.radiant++;
+                            else
+                                score.dire++;
+
+                            renderScore();
+                        } else {
+                            if (radiant && users[userstate['user-id']] === 'radiant')
+                                return false;
+
+                            if (!radiant && users[userstate['user-id']] === 'dire')
+                                return false;
+
+                            if (radiant) {
+                                score.radiant++;
+                                score.dire--;
+                            } else {
+                                score.dire++;
+                                score.radiant--;
+                            }
+
+                            users[userstate['user-id']] = radiant ? 'radiant' : 'dire';
+
+                            renderScore();
+                        }
+                    }
+                });
+            })();
+        </script>
+    </body>
+</html>

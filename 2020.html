@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TopStream - новогодние виджеты для стрима</title>
+        <link rel="shortcut icon" href="./favicon.ico">
+        <meta property="og:title" content="TopStream - обязательный инструмент для стримера в 2к20">
+        <meta property="og:description" content="Приложение чата и виджетов для стримеров TopStream. Мультичат для Twitch, YouTube, GoodGame, VK, Peka2.">
+        <meta property="og:image" content="https://topstream.pro/assets/og.jpg">
+        <meta property="og:url" content="https://topstream.pro/">
+        <meta name="title" content="TopStream - обязательный инструмент для стримера в 2к20">
+        <meta name="description" content="Приложение чата и виджетов для стримеров TopStream. Мультичат для Twitch, YouTube, GoodGame, VK, Peka2.">
+        <meta name="author" content="topstream">
+        <link href="./assets/build-9071950943361662.css" rel="stylesheet" type="text/css">
+        <link href="./assets/2019.css" rel="stylesheet" type="text/css">
+    </head>
+    <body class="bg-dark">
+        <video loop muted class="snow-back"></video>
+
+        <div class="container mt-5">
+            <div class="row mb-5">
+                <div class="col-10">
+                    <h1 class="text-white font-weight-light mt-3">С наступающим 2020 годом!</h1>
+                    <h5 class="text-white font-weight-light mt-3">На этой странице вы можете получить виджет снега для стрима.</h5>
+                    <h5 class="text-white font-weight-light mt-3">Легко и просто разместите снег на стрим.</h5>
+                    <h5 class="text-white font-weight-light mt-2">Получить виджет можно совершенно бесплатно, просто скопировав ссылку.</h5>
+                </div>
+                <div class="col">
+                    <img src="./assets/logo2019.png" class="logo mt-3" alt="Новогодний виджет для стрима">
+                </div>
+            </div>
+
+            <h2 class="text-white font-weight-light">Падающий снег</h2>
+
+            <h5 class="text-white font-weight-light mt-2">Виджет с классным падающим снегом придаст новогоднее настроение вашей трансляции. Вы сами можете выбрать желаемую скорость падения снега и его количество.</h5>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group mt-5">
+                        <label for="snowSpeed" class="text-white">Скорость падения снега:</label>
+                        <input type="range" min="1" max="100" id="snowSpeed" class="form-control">
+                    </div>
+                    <div class="form-group mt-5">
+                        <label for="snowSpeed" class="text-white">Количество снежинок:</label>
+                        <input type="range" min="50" max="200" id="snowCount" class="form-control">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="snowUrl" class="text-white">Ссылка на виджет для добавления в OBS/XSplit:</label>
+                        <input type="text" class="form-control bg-dark text-white" id="snowUrl" readonly>
+                    </div>
+                </div>
+                <div class="col">
+                    <iframe id="snowPreview" src="/widget/snow2.html" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <h2 class="text-white font-weight-light mt-5">Вручить новогодний подарочек разработчикам чата и снега</h2>
+
+            <p class="text-white font-weight-light mt-2 h5">Если вам понравился чатик TopStream и снежок будем рады вашей новогодней поддержке. :)</p>
+
+            <a class="btn btn-primary mt-4" href="https://vk.cc/8uvSaZ" target="_blank">Поздравить с новым годом</a>
+
+            <footer class="navbar navbar-expand-lg navbar-dark mt-5">
+                <ul class="navbar-nav navbar-left">
+                    <li class="nav-item">
+                        <p class="nav-link">TopStream &copy; 2018 - 2020</p>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Чатик</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://codepen.io/loktar00/pen/CHpGo" target="_blank">Виджета снега основан на скрипте от loktar00</a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+        <script src="/assets/2020_2.js"></script>
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        
+            ym(47933894, "init", {
+                id:47933894,
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+            });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/47933894" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+    </body>
+</html>

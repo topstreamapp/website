@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>TopStream Player</title>
+    <meta property="og:title" content="TopStream Player">
+    <meta property="og:description" content="Мультитвич (multitwitch) для нескольких стриминговых сервисов.">
+    <meta property="og:url" content="http://player.topstream.xyz/">
+    <meta name="title" content="TopStream Player">
+    <meta name="description" content="Мультитвич (multitwitch) для нескольких стриминговых сервисов.">
+    <meta name="author" content="TopStream">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="./notyf.min.css">
+    <link rel="stylesheet" href="./multiplayer.css?v=020">
+</head>
+<body>
+    <div class="topbar" id="topbar">
+        <div class="title">TopStream Player</div>
+        <button class="service-btn" id="hide">Скрыть</button>
+        <button class="service-btn" id="gen">Ссылка</button>
+        <button class="service-btn" id="add">Добавить</button>
+        <input class="service-url" placeholder="Ссылка на канал или чат" id="link">
+    </div>
+    <div class="help">
+        <div class="help-content">
+            <div class="help-header">
+                Привет! Данный сервис поможет объединить плееры и чаты различных сервисов на одной странице!<br>
+                Сверху есть поле "Ссылка на канал или чат", поместив в него ссылку на канал или чат, и нажав кнопку "Добавить" вы добавите плеер или чат на страницу.<br>
+                После того, как вы добавите все плееры и чаты, нажмите "Ссылка" и поделитесь ссылкой на собранную вами страницу с товарищами.<br>
+            </div>
+            <span class="advice">
+                <b>Подсказки и примеры по сервисам:</b><br>
+                <br>
+                Плеер Twitch: https://www.twitch.tv/monstercat<br>
+                Чат Twitch: https://www.twitch.tv/monstercat/chat<br>
+                <br>
+                Плеер YouTube: https://www.youtube.com/watch?v=ueupsBPNkSc<br>
+                Чат YouTube: https://www.youtube.com/live_chat?is_popout=1&amp;v=ueupsBPNkSc<br>
+                <br>
+                Плеер GoodGame: https://goodgame.ru/channel/frozza/<br>
+                Чат GoodGame: https://goodgame.ru/chat/frozza/
+            </span>
+        </div>
+        <div class="changelog">
+            <p><b>История изменений:</b></p>
+            Версия 0.2.1
+            <ul>
+                <li>Теперь при нечетном количестве плееров нет противных полосок</li>
+                <li>Помощь не пропадает при неудачном добавлении плеера или чата</li>
+            </ul>
+
+            Версия 0.2.0
+            <ul>
+                <li>Небольшой редизайн</li>
+                <li>Инструкция перенесена из Яндекс.Диска на эту страницу</li>
+            </ul>
+
+            Версия 0.1.2
+            <ul>
+                <li>Убраны некоторые невидимые ошибки</li>
+                <li>Добавлен changelog</li>
+                <li>Исправлен GoodGame, теперь Нюк сможет использовать этот сервис</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container"></div>
+    <script src="./notyf.min.js"></script>
+    <script src="./multiplayer.js?v=020"></script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter46092723 = new Ya.Metrika({
+                        id:46092723,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/46092723" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</body>
+</html>
